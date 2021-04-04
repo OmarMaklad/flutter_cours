@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_cours/widget/customButton.dart';
+import 'package:flutter_cours/widget/customFeild.dart';
 
 class LoginView extends StatefulWidget {
   @override
@@ -88,25 +90,9 @@ class _LoginViewState extends State<LoginView> {
               ),
             ),
           ),
-          Padding(
-            padding:  EdgeInsets.symmetric(horizontal: 25,vertical: 5),
-            child: TextFormField(
-              decoration: InputDecoration(
-                hintText: "password",
-                prefixIcon: Icon(Icons.lock),
-                filled: true,
-                fillColor: Colors.white,
-                enabledBorder: OutlineInputBorder(
-                    borderRadius: BorderRadius.circular(30),
-                    borderSide: BorderSide(color: Colors.green,width: 1)
-                ),
-                focusedBorder: OutlineInputBorder(
-                    borderRadius: BorderRadius.circular(30),
-                    borderSide: BorderSide(color: Colors.purple,width: 2)
-                ),
-              ),
-            ),
-          ),
+         CustomFeild(hint: "user name", icon: Icons.person),
+         CustomFeild(hint: "password", icon: Icons.lock),
+          CustomButton(onPressed: (){}, title: "Sign In")
       ],),
     );
   }

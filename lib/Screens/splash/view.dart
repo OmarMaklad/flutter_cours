@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_cours/Screens/login/view.dart';
+import 'package:flutter_cours/Screens/signUp/view.dart';
 
 class SplashView extends StatefulWidget {
   @override
@@ -36,15 +37,20 @@ class _SplashViewState extends State<SplashView> {
                       child: Text("Sign In")),
                 ),
               ),
-              Container(
-                height:height*.065 ,
-                width: height*.2,
-                decoration: BoxDecoration(
-                  color: Colors.white,
-                  borderRadius: BorderRadius.circular(30),
-                  border: Border.all(color: Colors.black,width: 1)
+              GestureDetector(
+                onTap: (){
+                  Navigator.push(context, MaterialPageRoute(builder:(_)=>SignUpView()));
+                },
+                child: Container(
+                  height:height*.065 ,
+                  width: height*.2,
+                  decoration: BoxDecoration(
+                    color: Colors.white,
+                    borderRadius: BorderRadius.circular(30),
+                    border: Border.all(color: Colors.black,width: 1)
+                  ),
+                  child: Center(child: Text("SignUp")),
                 ),
-                child: Center(child: Text("SignUp")),
               ),
 
             ],
